@@ -7,13 +7,12 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
-    <title>Login</title>
-    <%@include file="partials/head.jsp"%>
-</head>
+    <jsp:include page="partials/head.jsp">
+        <jsp:param name="title" value="Login"/>
+    </jsp:include>
 <body>
 <%@include file="partials/navbar.jsp"%>
-<form>
+<form method="POST">
     <label for="username">Username:</label><br>
     <input type="text" id="username" name="username"><br>
     <label for="password">Password:</label><br>

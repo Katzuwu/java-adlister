@@ -7,10 +7,9 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
-    <title>Profile</title>
-    <%@include file="partials/head.jsp"%>
-</head>
+    <jsp:include page="partials/head.jsp">
+        <jsp:param name="title" value="Profile"/>
+    </jsp:include>
 <body>
 <h1>You entered the right username and password!</h1>
 </body>
