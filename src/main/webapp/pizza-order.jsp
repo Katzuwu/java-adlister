@@ -11,36 +11,37 @@
   <title>Order A Pizza!</title>
 </head>
 <body>
-<form method="post">
+<form action="/pizza-order" method="post">
+
+	<label for="size">Choose a size:</label>
+	<select name="size" id="size">
+		<option value="small">Small</option>
+		<option value="medium">Medium</option>
+		<option value="large">Large</option>
+		<option value="x-large">Extra Large</option>
+	</select><br>
+
   <label for="crust">Choose a crust:</label>
   <select name="crust" id="crust">
 	<option value="thin">Thin</option>
 	<option value="brick-oven">Brick Oven</option>
 	<option value="pan">Pan Crust</option>
 	<option value="deep-dish">Deep Dish</option>
-  </select>
+  </select><br>
 
   <label for="sauce">Choose a sauce:</label>
   <select name="sauce" id="sauce">
 	<option value="tomato">Tomato</option>
 	<option value="marinara">Marinara</option>
 	<option value="alfredo">Alfredo</option>
-  </select>
-
-  <label for="size">Choose a size:</label>
-  <select name="size" id="size">
-	<option value="small">Small</option>
-	<option value="medium">Medium</option>
-	<option value="large">Large</option>
-	<option value="x-large">Extra Large</option>
-  </select>
+  </select><br>
 
   <p>Choose your toppings:</p><br>
-  <input type="checkbox" id="chicken" name="chicken" value="Bike">
+  <input type="checkbox" id="chicken" name="toppings" value="chicken">
   <label for="chicken"> Chicken</label><br>
-  <input type="checkbox" id="pepperoni" name="pepperoni" value="Car">
+  <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
   <label for="pepperoni"> Pepperoni</label><br>
-  <input type="checkbox" id="sausage" name="sausage" value="Boat">
+  <input type="checkbox" id="sausage" name="toppings" value="sausage">
   <label for="sausage"> Sausage</label><br><br>
   <input type="submit" value="Submit">
 </form>
