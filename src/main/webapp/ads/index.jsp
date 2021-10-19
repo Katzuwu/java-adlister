@@ -9,12 +9,22 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-	<title>Sponsors</title>
+	<title>Adlister: Ads</title>
+	<style>
+		div{
+			border: 1px solid black;
+		}
+	</style>
 </head>
 <body>
+<h1>Ads: </h1>
 	<div>
-		<c:forEach var="ad" items="ads">
-
+		<c:forEach var="ad" items="${ads}">
+			<div>
+				<p>${ad.userId}</p>
+				<p>${ad.title}</p>
+				<p>${ad.description}</p>
+			</div>
 		</c:forEach>
 	</div>
 
