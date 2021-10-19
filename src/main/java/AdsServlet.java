@@ -10,8 +10,6 @@ import java.util.List;
 public class AdsServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
-
-		new DaoFactory();
 		Ads ads = DaoFactory.getAdsDao();
 
 		List<Ad> ad = ads.all();

@@ -9,7 +9,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-	<title>Adlister: Ads</title>
+	<jsp:include page="/partials/head.jsp">
+		<jsp:param name="title" value="Ads" />
+	</jsp:include>
 	<style>
 		div{
 			border: 1px solid black;
@@ -17,6 +19,7 @@
 	</style>
 </head>
 <body>
+<jsp:include page="/partials/navbar.jsp" />
 <h1>Ads: </h1>
 	<div>
 		<c:forEach var="ad" items="${ads}">
