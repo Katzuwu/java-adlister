@@ -9,6 +9,7 @@ import java.io.IOException;
 @WebServlet(name = "LoginServlet", urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    	request.getSession().getAttribute("user");
         request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
     }
 
@@ -21,7 +22,6 @@ public class LoginServlet extends HttpServlet {
 
         if (validAttempt) {
         	session.setAttribute("user", username);
-	        session.setAttribute("password", password);
             response.sendRedirect("/profile");
         } else {
             response.sendRedirect("/login");
