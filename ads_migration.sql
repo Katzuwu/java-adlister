@@ -4,7 +4,7 @@ drop table if exists ads;
 
 create table ads(
                     id int unsigned not null auto_increment,
-                    user_id int unsigned default null,
+                    user_id int unsigned not null,
                     title varchar(140),
                     description text,
                     PRIMARY KEY (id),
