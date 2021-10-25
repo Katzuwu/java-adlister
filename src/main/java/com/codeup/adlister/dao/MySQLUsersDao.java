@@ -40,6 +40,9 @@ public class MySQLUsersDao implements Users {
 	}
 
 	private User extractUser(ResultSet rs) throws SQLException {
+		if (!rs.next()) {
+			return null;
+		}
 		return new User(
 				rs.getLong("id"),
 				rs.getString("username"),
@@ -63,5 +66,9 @@ public class MySQLUsersDao implements Users {
 		} catch (SQLException throwables) {
 			throw new RuntimeException("Error creating a new ad.", throwables);
 		}
+	}
+	public static void main(String[] args) {
+		Users usersDao = new MySQLUsersDao(new Config());
+		System.out.println(usersDao.findByUsername("newuser"));
 	}
 }
